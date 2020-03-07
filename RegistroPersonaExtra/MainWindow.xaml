@@ -16,7 +16,7 @@
         <Button Content="Eliminar" HorizontalAlignment="Left" Margin="279,197,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Click="ButtonEliminar"/>
         <Button Content="Guardar" HorizontalAlignment="Left" Margin="161,197,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Click="ButtonGuardar"/>
         <Button Content="Buscar" HorizontalAlignment="Left" Margin="279,44,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.181,0.672" FontWeight="Bold" FontSize="14" Width="58" Click="ButtonBuscar"/>
-        <Button Content="Consultar" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Normal" FontSize="14" Width="73" Click="ButtonNuevo"/>
+        <Button Content="Consultar" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonConsultar"/>
 
     </Grid>
 </Window>

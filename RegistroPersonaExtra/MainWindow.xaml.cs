@@ -1,5 +1,6 @@
 ﻿using RegistroPersonaExtra.BLL;
 using RegistroPersonaExtra.Entidades;
+using RegistroPersonaExtra.UI.Consultas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -136,6 +137,12 @@ namespace RegistroPersonaExtra
             {
                 MessageBox.Show("Persona No Encontrada!!");
             }
+        }
+
+        private void ButtonConsultar(object sender, RoutedEventArgs e)
+        {
+            ConsultaPersonas cpersonas = new ConsultaPersonas();
+            cpersonas.Show();
         }
     }
   }
