@@ -3,6 +3,8 @@ using RegistroPersonaExtra.DAL;
 using RegistroPersonaExtra.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace RegistroPersonaExtra.BLL
@@ -94,6 +96,28 @@ namespace RegistroPersonaExtra.BLL
                 db.Dispose();
             }
             return personas;
+        }
+
+        public static List<Personas> GetList(Expression<Func<Personas, bool>> persona)
+        {
+            List<Personas> lista = new List<Personas>();
+            Contexto db = new Contexto();
+
+            try
+            {
+                lista = db.personas.Where(persona).ToList();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+
+            return lista;
         }
     }
 }

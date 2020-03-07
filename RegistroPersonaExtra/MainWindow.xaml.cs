@@ -69,5 +69,74 @@ namespace RegistroPersonaExtra
             Personas personas = PersonasBLL.Buscar((int)Convert.ToInt32(Idtextbox.Text));
             return (personas != null);
         }
+
+        private void ButtonGuardar(object sender, RoutedEventArgs e)
+        {
+            Personas personas;
+            bool paso = false;
+
+            if (!Validar())
+                return;
+
+            personas = LlenaClase();
+
+
+            if (Idtextbox.Text == "0")
+                paso = PersonasBLL.Guardar(personas);
+
+            else
+            {
+                if (!ExisteEnLaBaseDatos())
+                {
+                    MessageBox.Show("No puede modificar alguien que no existe");
+                }
+
+                paso = PersonasBLL.Modificar(personas);
+            }
+
+            if (paso)
+            {
+                MessageBox.Show("¡¡Guardado!!");
+            }
+            else
+            {
+                MessageBox.Show("No se Guardo!!");
+            }
+        }
+
+        private void ButtonEliminar(object sender, RoutedEventArgs e)
+        {
+            int id;
+            int.TryParse(Idtextbox.Text, out id);
+
+            if (PersonasBLL.Eliminar(id))
+            {
+                MessageBox.Show("Eliminado!!");
+            }
+            else
+            {
+                MessageBox.Show("No se pudo Eliminar!!");
+            }
+        }
+
+        private void ButtonBuscar(object sender, RoutedEventArgs e)
+        {
+            int id;
+            int.TryParse(Idtextbox.Text, out id);
+            Personas personas = new Personas();
+
+            personas = PersonasBLL.Buscar(id);
+
+            if (personas != null)
+            {
+                MessageBox.Show("Persona Encontrada!!");
+                LlenaCampo(personas);
+            }
+            else
+            {
+                MessageBox.Show("Persona No Encontrada!!");
+            }
+        }
     }
-}
+    }
+
