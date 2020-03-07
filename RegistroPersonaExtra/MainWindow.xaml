@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegistroPersonaExtra"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Registro de personas" Height="300" Width="400">
     <Grid>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="61,35,0,0" VerticalAlignment="Top" Height="37" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Nombres" HorizontalAlignment="Left" Margin="61,111,0,0" VerticalAlignment="Top" Height="37" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="Idtextbox" HorizontalAlignment="Left" Margin="161,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="Nombretextbox" HorizontalAlignment="Left" Margin="161,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Bold" FontSize="14"/>
+        <Button Content="Nuevo" HorizontalAlignment="Left" Margin="61,197,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Width="52" Click="ButtonNuevo"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="161,197,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="279,197,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Click="ButtonEliminar"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="161,197,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Click="ButtonGuardar"/>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="279,44,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.181,0.672" FontWeight="Bold" FontSize="14" Width="58" Click="ButtonBuscar"/>
+        <Button Content="Consultar" HorizontalAlignment="Left" VerticalAlignment="Top" FontWeight="Normal" FontSize="14" Width="73" Click="ButtonNuevo"/>
 
     </Grid>
 </Window>
